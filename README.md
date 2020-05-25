@@ -1,4 +1,4 @@
-##Blog - Magazine Template
+## Blog - Magazine Template
 
 ## Bootstrap 4.3.1
 
@@ -10,6 +10,6 @@ Magz is a free news portal website template that works for anything niche and ge
 With Magz, you get all sorts of goodies that will create a professional and sophisticated news magazine website. Sticky menu, carousels, back to top button, video support and pagination are just a few of the features that you get with Magz. Along with the home page, you also get various inner layouts, Google Maps and a working contact form, to name a few. Start pushing news with Magz!
 
 
-##Dont forget to give it a star.
+## Dont forget to give it a star.
 
 Happy coding.
