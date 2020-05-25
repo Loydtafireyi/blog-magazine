@@ -1,5 +1,8 @@
 ## Blog - Magazine Template
 
+## Demo Link 
+<a href="https://modest-ritchie-8b3a2a.netlify.app/"> VIEW BEMO </a>
+
 ## Bootstrap 4.3.1
 
 Creating clean responsive UI from scratch can be a pain in a day of a software engineer.

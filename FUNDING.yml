@@ -9,4 +9,4 @@ community_bridge: # Replace with a single Community Bridge project-name e.g., cl
 liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
-custom: ['https://www.paynow.co.zw/Payment/Link/?q=c2VhcmNoPWxveWR0YWZpcmV5aSU0MGdtYWlsLmNvbSZhbW91bnQ9NTAuMDAmcmVmZXJlbmNlPSZsPTA%3d']
+custom: ['https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RW5UX3B999L2W&source=url', 'https://www.paynow.co.zw/Payment/Link/?q=c2VhcmNoPWxveWR0YWZpcmV5aSU0MGdtYWlsLmNvbSZhbW91bnQ9NTAuMDAmcmVmZXJlbmNlPSZsPTA%3d']
