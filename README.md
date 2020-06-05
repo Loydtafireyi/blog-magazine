@@ -1,7 +1,7 @@
 ## Blog - Magazine Template
 
 ## Demo Link 
-<a href="https://modest-ritchie-8b3a2a.netlify.app/"> VIEW BEMO </a>
+<a href="https://modest-ritchie-8b3a2a.netlify.app/"> VIEW DEMO </a>
 
 ## Bootstrap 4.3.1
 
