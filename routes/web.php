@@ -25,6 +25,7 @@ Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCall
 Route::middleware(['auth'])->group(function () {
 	Route::get('/home', 'HomeController@index')->name('home');
 	Route::resource('category', 'CategoryController');
+	Route::resource('tag', 'TagsController');
 	Route::resource('post', 'PostController');
 	Route::get('trashed-post', 'PostController@trashedPost')->name('trashed-post');
 	Route::put('restore-post/{id}', 'PostController@restorePost')->name('restore-post');
