@@ -54,6 +54,26 @@
 				<label for="image">Post Featured Image</label>
 				<input type="file" name="image" id="image" class="form-control-file">
 			</div>
+
+			@if($tags->count() > 0)
+				<div class="form-group">
+					<label for="tags">Tags</label>
+					<select name="tags[]" id="tags" class="form-control" multiple>
+						@foreach($tags as $tag)
+							<option value="{{$tag->id}}"
+								@if(isset($post))
+									@if($post->hasTag($tag->id))
+										selected 
+									@endif
+								@endif
+								>
+								{{ $tag->name }}
+							</option>
+						@endforeach
+					</select>
+				</div>
+			@endif
+
 			<div class="form-group">
 				<label for="published_at">Schedule Post</label>
 				<input type="date" name="published_at" id="published_at" class="form-control">

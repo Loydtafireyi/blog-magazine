@@ -14,6 +14,7 @@
 			<table class="table table-hover table-bordered table-dark">
 				<thead class="text-uppercase">
 					<th>Name</th>
+					<th>Post Tags</th>
 					<th>Edit</th>
 					<th>Delete</th>
 				</thead>
@@ -21,6 +22,7 @@
 					@foreach($tags as $tag)
 					<tr>
 						<td>{{ $tag->name }}</td>
+						<td>{{ $tag->posts->count() }}</td>
 						<td>
 							<a class="btn btn-sm btn-primary" href="{{ route('tag.edit', $tag->id) }}">Edit</a>
 						</td>

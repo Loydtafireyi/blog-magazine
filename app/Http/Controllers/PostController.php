@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use App\Post;
 use App\Category;
 use Illuminate\Support\Facades\Storage;
@@ -35,7 +36,9 @@ class PostController extends Controller
     {
         $categories = Category::all();
 
-        return view('admin.posts.create', compact('categories'));
+        $tags = Tag::all();
+
+        return view('admin.posts.create', compact('categories', 'tags'));
     }
 
     /**
@@ -46,9 +49,10 @@ class PostController extends Controller
      */
     public function store(CreatePostRequest $request)
     {
+
         $image = $request->image->move('uploads/posts', 'public');
 
-        Post::create([
+        $post = Post::create([
             'title' => $request->title,
             'description' => $request->description,
             'content' => $request->content,
@@ -56,6 +60,11 @@ class PostController extends Controller
             'published_at' => $request->published_at,
             'category_id' => $request->category_id
         ]);
+
+        if($request->tags) {
+
+            $post->tags()->attach($request->tags);
+        }
 
         session()->flash('success', $request->title . ' post added successfully!' );
 
@@ -80,10 +89,12 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Post $post)
-    {
+    {         
         $categories = Category::all();
+
+        $tags = Tag::all();
         
-        return view('admin.posts.create', compact('categories', 'post'));
+        return view('admin.posts.create', compact('categories', 'post', 'tags'));
     }
 
     /**
@@ -106,6 +117,10 @@ class PostController extends Controller
             Storage::delete($post->image);
 
             $data['image'] = $image;
+        }
+
+        if($request->tags) {
+            $post->tags()->sync($request->tags);
         }
 
         //update post atrributes
